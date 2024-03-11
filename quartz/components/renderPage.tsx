@@ -210,9 +210,9 @@ export function renderPage(
     </div>
   )
 
-  const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
+  const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "ar"
   const doc = (
-    <html lang={lang}>
+    <html dir="rtl" lang={lang}>
       <Head {...componentData} />
       <body data-slug={slug}>
         <div id="quartz-root" class="page">

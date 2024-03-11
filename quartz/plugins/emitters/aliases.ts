@@ -59,7 +59,7 @@ export const AliasRedirects: QuartzEmitterPlugin = () => ({
           ctx,
           content: `
             <!DOCTYPE html>
-            <html lang="en-us">
+            <html dir="rtl" lang="ar">
             <head>
             <title>${ogSlug}</title>
             <link rel="canonical" href="${redirUrl}">
