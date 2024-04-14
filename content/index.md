@@ -24,7 +24,7 @@ title: المقدمة
 - اللقب: The Alpha
 - الموقع: https://NabilAlsaiad.com
 - صفحة الروابط: https://Links.NabilAlsaiad.com
-# الرخصة
-هذا المنهج يحمل علامة CC0 1.0
+# الترخيص
+هذا المنهج يحمل علامة CC BY 4.0 &copy; 2024
 
-لعرض نسخة من هذا الترخيص، تفضل بزيارة [الموقع](http://creativecommons.org/publicdomain/zero/1.0) أو [الملف](./LICENSE)
+لعرض نسخة من هذا الترخيص، تفضل بزيارة [الموقع](https://creativecommons.org/licenses/by/4.0) أو [الملف](./LICENSE)
