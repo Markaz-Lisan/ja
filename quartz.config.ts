@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🎎 日本語 لنتعلم 🎎",
+    pageTitle: "🎎 لنتعلم 日本語 🎎",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
@@ -67,9 +67,16 @@ const config: QuartzConfig = {
       Plugin.ContentPage(),
       Plugin.FolderPage(),
       Plugin.TagPage(),
-      Plugin.ContentIndex({ enableSiteMap: true }),
+      Plugin.ContentIndex({
+        enableRSS: true,
+        enableSiteMap: true,
+        includeEmptyFiles: false,
+        rssFullHtml: false,
+        rssLimit: 20,
+      }),
       Plugin.Assets(),
       Plugin.NotFoundPage(),
+      Plugin.CNAME(),
     ],
   },
 }
