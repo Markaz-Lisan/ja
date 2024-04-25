@@ -5,7 +5,7 @@ import yaml from "js-yaml"
 import toml from "toml"
 import { slugTag } from "../../util/path"
 import { QuartzPluginData } from "../vfile"
-import { i18n } from "../../i18n"
+import locale from "../../locales/ar"
 
 export interface Options {
   delimiters: string | [string, string]
@@ -60,7 +60,7 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options> | undefined> 
             if (data.title != null && data.title.toString() !== "") {
               data.title = data.title.toString()
             } else {
-              data.title = file.stem ?? i18n(cfg.configuration.locale).propertyDefaults.title
+              data.title = file.stem ?? locale.propertyDefaults.title
             }
 
             const tags = coerceToArray(coalesceAliases(data, ["tags", "tag"]))

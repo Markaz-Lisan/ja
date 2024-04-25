@@ -1,13 +1,14 @@
-import { render } from "preact-render-to-string"
-import { QuartzComponent, QuartzComponentProps } from "./types"
+import type { QuartzComponent, QuartzComponentProps } from "./types"
+import type { Root, Element, ElementContent } from "hast"
+import type { GlobalConfiguration } from "../cfg"
+
 import HeaderConstructor from "./Header"
 import BodyConstructor from "./Body"
+import { render } from "preact-render-to-string"
 import { JSResourceToScriptElement, StaticResources } from "../util/resources"
 import { clone, FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
 import { visit } from "unist-util-visit"
-import { Root, Element, ElementContent } from "hast"
-import { GlobalConfiguration } from "../cfg"
-import { i18n } from "../i18n"
+import locale from "../locales/ar"
 
 interface RenderComponents {
   head: QuartzComponent
@@ -96,9 +97,7 @@ export function renderPage(
                 type: "element",
                 tagName: "a",
                 properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
-                children: [
-                  { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
-                ],
+                children: [{ type: "text", value: locale.components.transcludes.linkToOriginal }],
               },
             ]
           }
@@ -139,9 +138,7 @@ export function renderPage(
               type: "element",
               tagName: "a",
               properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
-              children: [
-                { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
-              ],
+              children: [{ type: "text", value: locale.components.transcludes.linkToOriginal }],
             },
           ]
         } else if (page.htmlAst) {
@@ -156,7 +153,7 @@ export function renderPage(
                   type: "text",
                   value:
                     page.frontmatter?.title ??
-                    i18n(cfg.locale).components.transcludes.transcludeOf({
+                    locale.components.transcludes.transcludeOf({
                       targetSlug: page.slug!,
                     }),
                 },
@@ -169,9 +166,7 @@ export function renderPage(
               type: "element",
               tagName: "a",
               properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
-              children: [
-                { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
-              ],
+              children: [{ type: "text", value: locale.components.transcludes.linkToOriginal }],
             },
           ]
         }
@@ -210,9 +205,8 @@ export function renderPage(
     </div>
   )
 
-  const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "ar"
   const doc = (
-    <html dir="rtl" lang={lang}>
+    <html dir="rtl" lang="ar">
       <Head {...componentData} />
       <body data-slug={slug}>
         <div id="quartz-root" class="page">

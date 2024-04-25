@@ -15,7 +15,7 @@ import {
 import { defaultListPageLayout, sharedPageComponents } from "../../../quartz.layout"
 import { TagContent } from "../../components"
 import { write } from "./helpers"
-import { i18n } from "../../i18n"
+import locale from "../../locales/ar"
 import DepGraph from "../../depgraph"
 
 export const TagPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpts) => {
@@ -72,8 +72,8 @@ export const TagPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpts) 
         [...tags].map((tag) => {
           const title =
             tag === "index"
-              ? i18n(cfg.locale).pages.tagContent.tagIndex
-              : `${i18n(cfg.locale).pages.tagContent.tag}: ${tag}`
+              ? locale.pages.tagContent.tagIndex
+              : `${locale.pages.tagContent.tag}: ${tag}`
           return [
             tag,
             defaultProcessedContent({

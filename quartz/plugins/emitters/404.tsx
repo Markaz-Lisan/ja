@@ -8,7 +8,7 @@ import { sharedPageComponents } from "../../../quartz.layout"
 import { NotFound } from "../../components"
 import { defaultProcessedContent } from "../vfile"
 import { write } from "./helpers"
-import { i18n } from "../../i18n"
+import locale from "../../locales/ar"
 import DepGraph from "../../depgraph"
 
 export const NotFoundPage: QuartzEmitterPlugin = () => {
@@ -38,7 +38,7 @@ export const NotFoundPage: QuartzEmitterPlugin = () => {
       const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
       const path = url.pathname as FullSlug
       const externalResources = pageResources(path, resources)
-      const notFound = i18n(cfg.locale).pages.error.title
+      const notFound = locale.pages.error.title
       const [tree, vfile] = defaultProcessedContent({
         slug,
         text: notFound,

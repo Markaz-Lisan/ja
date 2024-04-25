@@ -1,5 +1,5 @@
 import { FilePath, FullSlug, joinSegments } from "../../util/path"
-import { QuartzEmitterPlugin } from "../types"
+import type { QuartzEmitterPlugin } from "../types"
 
 // @ts-ignore
 import spaRouterScript from "../../components/scripts/spa.inline"

@@ -1,20 +1,15 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/backlinks.scss"
 import { resolveRelative, simplifySlug } from "../util/path"
-import { i18n } from "../i18n"
 import { classNames } from "../util/lang"
+import locale from "../locales/ar"
 
-const Backlinks: QuartzComponent = ({
-  fileData,
-  allFiles,
-  displayClass,
-  cfg,
-}: QuartzComponentProps) => {
+const Backlinks: QuartzComponent = ({ fileData, allFiles, displayClass }: QuartzComponentProps) => {
   const slug = simplifySlug(fileData.slug!)
   const backlinkFiles = allFiles.filter((file) => file.links?.includes(slug))
   return (
     <div class={classNames(displayClass, "backlinks")}>
-      <h3>{i18n(cfg.locale).components.backlinks.title}</h3>
+      <h3>{locale.components.backlinks.title}</h3>
       <ul class="overflow">
         {backlinkFiles.length > 0 ? (
           backlinkFiles.map((f) => (
@@ -25,7 +20,7 @@ const Backlinks: QuartzComponent = ({
             </li>
           ))
         ) : (
-          <li>{i18n(cfg.locale).components.backlinks.noBacklinksFound}</li>
+          <li>{locale.components.backlinks.noBacklinksFound}</li>
         )}
       </ul>
     </div>

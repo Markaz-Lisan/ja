@@ -1,4 +1,4 @@
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
+import type { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 import path from "path"
 
 import style from "../styles/listPage.scss"
@@ -6,7 +6,7 @@ import { PageList } from "../PageList"
 import { stripSlashes, simplifySlug } from "../../util/path"
 import { Root } from "hast"
 import { htmlToJsx } from "../../util/jsx"
-import { i18n } from "../../i18n"
+import locale from "../../locales/ar"
 
 interface FolderContentOptions {
   /**
@@ -53,7 +53,7 @@ export default ((opts?: Partial<FolderContentOptions>) => {
         <div class="page-listing">
           {options.showFolderCount && (
             <p>
-              {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
+              {locale.pages.folderContent.itemsUnderFolder({
                 count: allPagesInFolder.length,
               })}
             </p>

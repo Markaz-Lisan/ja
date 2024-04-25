@@ -1,11 +1,12 @@
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
-import style from "../styles/listPage.scss"
+import type { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
+import type { QuartzPluginData } from "../../plugins/vfile"
+import type { Root } from "hast"
+
 import { PageList } from "../PageList"
 import { FullSlug, getAllSegmentPrefixes, simplifySlug } from "../../util/path"
-import { QuartzPluginData } from "../../plugins/vfile"
-import { Root } from "hast"
 import { htmlToJsx } from "../../util/jsx"
-import { i18n } from "../../i18n"
+import style from "../styles/listPage.scss"
+import locale from "../../locales/ar"
 
 const numPages = 10
 const TagContent: QuartzComponent = (props: QuartzComponentProps) => {
@@ -43,7 +44,7 @@ const TagContent: QuartzComponent = (props: QuartzComponentProps) => {
         <article>
           <p>{content}</p>
         </article>
-        <p>{i18n(cfg.locale).pages.tagContent.totalTags({ count: tags.length })}</p>
+        <p>{locale.pages.tagContent.totalTags({ count: tags.length })}</p>
         <div>
           {tags.map((tag) => {
             const pages = tagItemMap.get(tag)!
@@ -64,13 +65,11 @@ const TagContent: QuartzComponent = (props: QuartzComponentProps) => {
                 {content && <p>{content}</p>}
                 <div class="page-listing">
                   <p>
-                    {i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}
+                    {locale.pages.tagContent.itemsUnderTag({ count: pages.length })}
                     {pages.length > numPages && (
                       <>
                         {" "}
-                        <span>
-                          {i18n(cfg.locale).pages.tagContent.showingFirst({ count: numPages })}
-                        </span>
+                        <span>{locale.pages.tagContent.showingFirst({ count: numPages })}</span>
                       </>
                     )}
                   </p>
@@ -93,7 +92,7 @@ const TagContent: QuartzComponent = (props: QuartzComponentProps) => {
       <div class={classes}>
         <article>{content}</article>
         <div class="page-listing">
-          <p>{i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}</p>
+          <p>{locale.pages.tagContent.itemsUnderTag({ count: pages.length })}</p>
           <div>
             <PageList {...listProps} />
           </div>

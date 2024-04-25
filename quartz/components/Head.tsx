@@ -1,4 +1,4 @@
-import { i18n } from "../i18n"
+import locale from "../locales/ar"
 import { FullSlug, joinSegments, pathToRoot } from "../util/path"
 import { JSResourceToScriptElement } from "../util/resources"
 import { googleFontHref } from "../util/theme"
@@ -6,9 +6,8 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 
 export default (() => {
   const Head: QuartzComponent = ({ cfg, fileData, externalResources }: QuartzComponentProps) => {
-    const title = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
-    const description =
-      fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
+    const title = fileData.frontmatter?.title ?? locale.propertyDefaults.title
+    const description = fileData.description?.trim() ?? locale.propertyDefaults.description
     const { css, js } = externalResources
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)

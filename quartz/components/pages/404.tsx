@@ -1,11 +1,12 @@
-import { i18n } from "../../i18n"
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
+import type { QuartzComponent, QuartzComponentConstructor } from "../types"
 
-const NotFound: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
+import locale from "../../locales/ar"
+
+const NotFound: QuartzComponent = () => {
   return (
     <article class="popover-hint">
       <h1>404</h1>
-      <p>{i18n(cfg.locale).pages.error.notFound}</p>
+      <p>{locale.pages.error.notFound}</p>
     </article>
   )
 }
