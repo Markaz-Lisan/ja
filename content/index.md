@@ -49,12 +49,12 @@ description: الصفحة الرئيسية
 ## خلاصات الRSS
 للحصول على خلاصات آخر التحديثات إنتقل إلى [ملف الفهرس](index.xml) أو [ملف خريطة الموقع](sitemap.xml)
 ## المنهج
-- المنشور: https://NabilAlsaiad.com/Learn-Yabani
+- المنشور: https://jp.TheAlpha.pro
 - المصدر: https://github.com/Nabil-Alsaiad/Learn-Yabani
 ## المؤلف
 - الاسم: نبيل الصياد
 - اللقب: The Alpha
-- صفحة الروابط: https://Links.NabilAlsaiad.com
+- صفحة الروابط: https://links.TheAlpha.pro
 # الترخيص
 هذا المنهج يحمل علامة CC BY 4.0 &copy; 2024
 

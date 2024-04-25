@@ -81,10 +81,17 @@ async function mouseEnterHandler(
       const contents = await response.text()
       const html = p.parseFromString(contents, "text/html")
       normalizeRelativeURLs(html, targetUrl)
-      const elts = [...html.getElementsByClassName("popover-hint")]
-      if (elts.length === 0) return
 
-      elts.forEach((elt) => popoverInner.appendChild(elt))
+      if (hash.includes("^")) {
+        const section = html.getElementById(hash.slice(1))
+        if (section) {
+          popoverInner.appendChild(section)
+        }
+      } else {
+        const elts = [...html.getElementsByClassName("popover-hint")]
+        if (elts.length === 0) return
+        elts.forEach((elt) => popoverInner.appendChild(elt))
+      }
   }
 
   setPosition(popoverElement)

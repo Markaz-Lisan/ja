@@ -42,7 +42,7 @@ export const TableOfContents: QuartzTransformerPlugin<Partial<Options> | undefin
               let highestDepth: number = opts.maxDepth
               visit(tree, "heading", (node) => {
                 if (node.depth <= opts.maxDepth) {
-                  const text = toString(node)
+                  const text = toString(node).replace(/<[^>]*>?/gm, "")
                   highestDepth = Math.min(highestDepth, node.depth)
                   toc.push({
                     depth: node.depth,

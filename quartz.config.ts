@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "ar",
-    baseUrl: "nabilalsaiad.com/Learn-Yabani",
+    baseUrl: "jp.thealpha.pro",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -72,7 +72,7 @@ const config: QuartzConfig = {
         enableSiteMap: true,
         includeEmptyFiles: false,
         rssFullHtml: false,
-        rssLimit: 20,
+        rssLimit: 40,
       }),
       Plugin.Assets(),
       Plugin.NotFoundPage(),
