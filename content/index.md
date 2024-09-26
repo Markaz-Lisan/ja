@@ -58,11 +58,9 @@ description: الصفحة الرئيسية
 للحصول على خلاصات آخر التحديثات إنتقل إلى [ملف الفهرس](index.xml) أو [ملف خريطة الموقع](sitemap.xml)
 ## المنهج
 - المنشور: https://jp.TheAlpha.pro
-- المصدر: https://github.com/Nabil-Alsaiad/Learn-Yabani
-## المؤلف
-- الاسم: نبيل الصياد
-- اللقب: The Alpha
-- صفحة الروابط: https://links.TheAlpha.pro
+- المصدر: https://github.com/Assayyaad/Learn-Yabani
+## تأليف
+- نبيل عبداللطيف الصياد
 # الترخيص
 هذا المنهج يحمل علامة CC BY 4.0 &copy; 2024
 
