@@ -60,4 +60,4 @@ description: الصفحة الرئيسية
 # الترخيص
 هذا المنهج يحمل علامة CC BY 4.0 &copy; 2024
 
-لعرض نسخة من هذا الترخيص، تفضل بزيارة [الموقع](https://creativecommons.org/licenses/by/4.0) أو [[LICENSE|الملف]]
+لعرض نسخة من هذا الترخيص، تفضل بزيارة [الموقع](https://creativecommons.org/licenses/by/4.0) أو [[الترخيص|الملف]]
