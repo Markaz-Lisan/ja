@@ -3,15 +3,19 @@
   "editor.formatOnSaveMode": "file",
   "editor.formatOnSave": true,
   "editor.trimAutoWhitespace": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
 
   "files.insertFinalNewline": true,
   "files.eol": "\n",
 
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    "editor.formatOnSave": false
-  },
+  "[markdown]": { "editor.defaultFormatter": "yzhang.markdown-all-in-one" },
   "markdown.replaceSmartQuotes": true,
   "markdown.occurrencesHighlight.enabled": true,
-  "markdown.extension.tableFormatter.enabled": false
+  "markdown.extension.tableFormatter.normalizeIndentation": true,
+
+  "javascript.suggest.jsdoc.generateReturns": true,
+  "javascript.suggest.completeJSDocs": true,
+  "javascript.suggest.autoImports": true,
+  "js/ts.implicitProjectConfig.checkJs": true
 }
