@@ -56,8 +56,8 @@ description: الصفحة الرئيسية
 ## خلاصات الRSS
 للحصول على خلاصات آخر التحديثات إنتقل إلى [ملف الفهرس](index.xml) أو [ملف خريطة الموقع](sitemap.xml)
 ## المنهج
-- المنشور: https://jp.TheAlpha.pro
-- المصدر: https://github.com/Assayyaad/Learn-Yabani
+- المنشور: https://lisan.center/ja
+- المصدر: https://github.com/Markaz-Lisan/JA
 ## تأليف
 - نبيل عبداللطيف الصياد
 # الترخيص
