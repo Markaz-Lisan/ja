@@ -1,5 +1,5 @@
-import { QuartzConfig } from "./quartz/cfg"
-import * as Plugin from "./quartz/plugins"
+import { QuartzConfig } from './quartz/cfg'
+import * as Plugin from './quartz/plugins'
 
 /**
  * Quartz 4.0 Configuration
@@ -8,57 +8,57 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🎎 لنتعلم 日本語 🎎",
+    pageTitle: 'مركز لسان: 日本語',
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
-    locale: "ar",
-    baseUrl: "jp.thealpha.pro",
-    ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    locale: 'ar',
+    baseUrl: 'lisan.center/ja',
+    ignorePatterns: ['private', 'templates', '.obsidian'],
+    defaultDateType: 'modified',
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: 'googleFonts',
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: 'Schibsted Grotesk',
+        body: 'Source Sans Pro',
+        code: 'IBM Plex Mono'
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: '#faf8f8',
+          lightgray: '#e5e5e5',
+          gray: '#b8b8b8',
+          darkgray: '#4e4e4e',
+          dark: '#2b2b2b',
+          secondary: '#284b63',
+          tertiary: '#84a59d',
+          highlight: 'rgba(143, 159, 169, 0.15)'
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-        },
-      },
-    },
+          light: '#161618',
+          lightgray: '#393639',
+          gray: '#646464',
+          darkgray: '#d4d4d4',
+          dark: '#ebebec',
+          secondary: '#7b97aa',
+          tertiary: '#84a59d',
+          highlight: 'rgba(143, 159, 169, 0.15)'
+        }
+      }
+    }
   },
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "git", "filesystem"],
+        priority: ['frontmatter', 'git', 'filesystem']
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents({ collapseByDefault: true }),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
-      Plugin.Description(),
+      Plugin.CrawlLinks({ markdownLinkResolution: 'shortest' }),
+      Plugin.Description()
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
@@ -72,13 +72,13 @@ const config: QuartzConfig = {
         enableSiteMap: true,
         includeEmptyFiles: false,
         rssFullHtml: false,
-        rssLimit: 40,
+        rssLimit: 40
       }),
       Plugin.Assets(),
       Plugin.NotFoundPage(),
-      Plugin.CNAME(),
-    ],
-  },
+      Plugin.CNAME()
+    ]
+  }
 }
 
 export default config
