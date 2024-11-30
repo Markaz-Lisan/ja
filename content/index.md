@@ -41,7 +41,7 @@ description: الصفحة الرئيسية
 
 ## المنهج
 
-- المنشور: https://lisan.center/ja
+- الموقع: https://ja.lisan.center
 - المصدر: https://github.com/Markaz-Lisan/ja
 ## تأليف
 - نبيل عبداللطيف الصياد

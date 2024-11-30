@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: 'ar',
-    baseUrl: 'lisan.center/ja',
+    baseUrl: 'ja.lisan.center',
     ignorePatterns: ['private', 'templates', '.obsidian'],
     defaultDateType: 'modified',
     theme: {
